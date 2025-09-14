@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center; /* центрирование формы по экрану */
+  font-family: Arial, sans-serif;
+}
+
+.login-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    display: grid;
+    gap: 15px;
+    width: 300px;
+}
+
+.login-form h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.login-form button[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Соцсети */
+.social-login {
+    text-align: center;
+    display: grid;
+    gap: 8px;
+}
+
+.google-btn {
+    background-color: #db4437;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.google-btn:hover {
+    background-color: #c23321;
+}
+
+.facebook-btn {
+    background-color: #4267B2;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.facebook-btn:hover {
+    background-color: #365899;
+}
