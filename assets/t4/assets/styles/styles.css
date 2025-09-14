@@ -56,7 +56,7 @@ body {
 }
 
 .google-btn {
-    background-color: #db4437;
+    background-color: #c82a1c;
     color: white;
     padding: 8px;
     border: none;
@@ -65,7 +65,7 @@ body {
 }
 
 .google-btn:hover {
-    background-color: #c23321;
+    background-color: #a21a08;
 }
 
 .facebook-btn {

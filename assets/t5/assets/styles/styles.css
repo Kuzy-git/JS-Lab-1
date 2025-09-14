@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background: #f0f0f0;
+}
+
+.dock {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  padding: 16px;
+  overflow: visible;
+}
+
+.dock img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  cursor: pointer;
+  transform-origin: center bottom;
+  transition: transform .18s cubic-bezier(.2,.9,.3,1), z-index 0s;
+  z-index: 1;
+  will-change: transform;
+}
+
+/* Центральная картинка */
+.dock img:hover {
+  transform: scale(1.9);
+  z-index: 50;
+}
+
+/* Правые соседи +1 и +2 */
+.dock img:hover + img {
+  transform: scale(1.35);
+  z-index: 40;
+}
+.dock img:hover + img + img {
+  transform: scale(1.15);
+  z-index: 30;
+}
+
+/* Левые соседи через :has() и nth-child */
+.dock:has(img:nth-child(2):hover) img:nth-child(1),
+.dock:has(img:nth-child(3):hover) img:nth-child(2),
+.dock:has(img:nth-child(4):hover) img:nth-child(3),
+.dock:has(img:nth-child(5):hover) img:nth-child(4),
+.dock:has(img:nth-child(6):hover) img:nth-child(5),
+.dock:has(img:nth-child(7):hover) img:nth-child(6) {
+  transform: scale(1.35);
+  z-index: 40;
+}
+
+.dock:has(img:nth-child(3):hover) img:nth-child(1),
+.dock:has(img:nth-child(4):hover) img:nth-child(2),
+.dock:has(img:nth-child(5):hover) img:nth-child(3),
+.dock:has(img:nth-child(6):hover) img:nth-child(4),
+.dock:has(img:nth-child(7):hover) img:nth-child(5) {
+  transform: scale(1.15);
+  z-index: 30;
+}
