@@ -7,18 +7,22 @@
 h1 {
     display: block;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100wh;
-    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto); /* все строки одинаковой высоты */
+    max-width: auto;  /* ограничиваем ширину поля */
+    gap: 10px;
+    padding: 10px;
+
 }
 
 .content {
-    width: 500px;
+    width: auto;      /* убрала фикс 500px */
+    max-width: auto;  /* чтобы не выходило за пределы */
 }
 
 .description {
@@ -26,5 +30,8 @@ h1 {
 }
 
 .house-image {
-    display: inline;
+    width: 100%;      /* картинка растягивается по ширине блока */
+    height: auto;     /* пропорции сохраняются */
+    display: block;   /* чтобы не было лишних отступов */
+
 }
