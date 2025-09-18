@@ -14,7 +14,6 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto); /* все строки одинаковой высоты */
-    max-width: auto;  /* ограничиваем ширину поля */
     gap: 10px;
     padding: 10px;
 
